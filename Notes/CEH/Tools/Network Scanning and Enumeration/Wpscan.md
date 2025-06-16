@@ -1,0 +1,1 @@
+This is the tool which is used to find the vulnerabilities in a website which is developed using WordPress.

@@ -1,0 +1,1 @@
+This is a windows based tool which is used to check the hashes of multiple files at a time.
