@@ -1,0 +1,86 @@
+# Nmap 7.94SVN scan initiated Thu Jun 19 12:35:01 2025 as: nmap -A -p- -T4 -vv -oN machines/Repo/Vulnhub/Blue/nmap_scan.txt 172.16.20.132
+Nmap scan report for 172.16.20.132
+Host is up, received arp-response (0.00053s latency).
+Scanned at 2025-06-19 12:35:02 IST for 88s
+Not shown: 65526 closed tcp ports (reset)
+PORT      STATE SERVICE      REASON          VERSION
+135/tcp   open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 128 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 128 Windows 7 Ultimate 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+49152/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49153/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49154/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49155/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49156/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49157/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 00:0C:29:9C:49:A2 (VMware)
+Device type: general purpose
+Running: Microsoft Windows 7|2008|8.1
+OS CPE: cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, Windows Server 2008 R2, Windows 8, or Windows 8.1 Update 1
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=6/19%OT=135%CT=1%CU=40903%PV=Y%DS=1%DC=D%G=Y%M=000C
+OS:29%TM=6853B6F6%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=104%TI=I%CI=I%I
+OS:I=I%SS=S%TS=7)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4N
+OS:W8ST11%O5=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5
+OS:=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M5B4NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%
+OS:T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)
+OS:T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=
+OS:O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF
+OS:=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G
+OS:)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.015 days (since Thu Jun 19 12:14:35 2025)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: WIN-845Q99OO4PP; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h19m58s, deviation: 2h18m33s, median: -1s
+| smb2-time: 
+|   date: 2025-06-19T07:06:24
+|_  start_date: 2025-06-19T16:14:58
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 56992/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 35422/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 43898/udp): CLEAN (Timeout)
+|   Check 4 (port 26966/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 7 Ultimate 7601 Service Pack 1 (Windows 7 Ultimate 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1
+|   Computer name: WIN-845Q99OO4PP
+|   NetBIOS computer name: WIN-845Q99OO4PP\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2025-06-19T03:06:24-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| nbstat: NetBIOS name: WIN-845Q99OO4PP, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:9c:49:a2 (VMware)
+| Names:
+|   WIN-845Q99OO4PP<20>  Flags: <unique><active>
+|   WIN-845Q99OO4PP<00>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00:0c:29:9c:49:a2:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.53 ms 172.16.20.132
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 19 12:36:31 2025 -- 1 IP address (1 host up) scanned in 90.21 seconds
