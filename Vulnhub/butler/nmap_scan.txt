@@ -1,0 +1,75 @@
+# Nmap 7.94SVN scan initiated Sat Jun 21 09:57:30 2025 as: nmap -A -p135,139,445,5040,7680,8080,9664,49665,49666,49667,49668,49670 -T4 -vv -oN ./nmap_scan.txt 172.16.20.134
+Nmap scan report for 172.16.20.134
+Host is up, received arp-response (0.00028s latency).
+Scanned at 2025-06-21 09:57:32 IST for 182s
+
+PORT      STATE  SERVICE       REASON          VERSION
+135/tcp   open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open   netbios-ssn   syn-ack ttl 128 Microsoft Windows netbios-ssn
+445/tcp   open   microsoft-ds? syn-ack ttl 128
+5040/tcp  open   unknown       syn-ack ttl 128
+7680/tcp  open   pando-pub?    syn-ack ttl 128
+8080/tcp  open   http          syn-ack ttl 128 Jetty 9.4.41.v20210516
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
+|_http-favicon: Unknown favicon MD5: 23E8C7BD78E8CD826C5A6073B15068B1
+|_http-server-header: Jetty(9.4.41.v20210516)
+9664/tcp  closed unknown       reset ttl 128
+49665/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49666/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49667/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49668/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49670/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 00:0C:29:71:C2:03 (VMware)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=6/21%OT=135%CT=9664%CU=43119%PV=Y%DS=1%DC=D%G=Y%M=0
+OS:00C29%TM=6856356A%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=109%TI=I%CI=
+OS:I%II=I%SS=S%TS=U)OPS(O1=M5B4NW8NNS%O2=M5B4NW8NNS%O3=M5B4NW8%O4=M5B4NW8NN
+OS:S%O5=M5B4NW8NNS%O6=M5B4NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W
+OS:6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M5B4NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=
+OS:O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%
+OS:DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O
+OS:=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80
+OS:%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q
+OS:=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y
+OS:%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2025-06-21T17:00:18
+|_  start_date: N/A
+| nbstat: NetBIOS name: BUTLER, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:71:c2:03 (VMware)
+| Names:
+|   BUTLER<20>           Flags: <unique><active>
+|   BUTLER<00>           Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   00:0c:29:71:c2:03:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 46501/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 60310/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 57395/udp): CLEAN (Timeout)
+|   Check 4 (port 12642/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: 12h29m59s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.28 ms 172.16.20.134
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun 21 10:00:34 2025 -- 1 IP address (1 host up) scanned in 184.59 seconds
