@@ -1,0 +1,22 @@
+//This is one of the Pico CTF's 
+
+* Need to get the flag from the mentioned site.
+
+Site:  http://mercury.picoctf.net:21939/
+
+In this method we can see two HTTP Methods GET and POST0. We can check that 
+with Burpsuite.
+
+You can use the following command to get the glag
+
+ curl -I HEAD -i http://mercury.picoctf.net:53554/index.php  --->
+
+ In the above command we are downloading the site data using curl command 
+ whith the option -I HEAD(one of the HTTP Methos).
+
+Othe process
+
+Open the Burpsuite and change the GET ----> HEAD and send the request to 
+get te flag
+
+Flag: picoCTF{r3j3ct_th3_du4l1ty_6ef27873}

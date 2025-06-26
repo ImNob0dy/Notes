@@ -1,0 +1,20 @@
+In this PicoCTF we get 2 file
+1) static
+2) Bash script(ltdis.sh)
+This ltdis is a bash script file which is uesed to decrypt the binary files.\
+
+We need to make the ltdis.sh file executable with the following permissions
+----------> chmod -x ltdis.sh
+
+We need to pass the "static" file as argument.
+
+This ltdis.sh file automatically decrypts the binary file.
+
+After runnning the bash file we get two output files:
+1) static.ltdis.strings.txt
+2) static.ltdis.x86_64.txt
+You can fild the file in the first file.
+
+Exception:
+If the bash file is throwing an error statig that a.out file not found
+Just create the file called a.out in the same directory.

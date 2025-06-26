@@ -1,0 +1,8 @@
+This piCo challeng is regarding the format string.
+Runt the challeng usin the "nc".
+
+Now check which option have formate string in it? "%."
+
+Select the option with the "%11". Now it will ask for another option.
+Look for the same "%s" you will get the flag.
+
