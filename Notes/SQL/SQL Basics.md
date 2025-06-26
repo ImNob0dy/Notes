@@ -1,5 +1,5 @@
-
-![[Repo/Images/Pasted image 20250626141742.png]] Example Scheme 
+![](Repo/Images/Pasted image 20250626141742)
+![]() Example Scheme 
 
 
 ## 1. Relational Database Concepts:
