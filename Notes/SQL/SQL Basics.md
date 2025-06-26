@@ -1,7 +1,4 @@
-![](Repo/Images/Pasted image 20250626141742)
-![]() Example Scheme 
-
-
+![Example Schema](![Image Description](../../Images/Pasted image 20250626141742.png))
 ## 1. Relational Database Concepts:
 
 Before SQL, let's briefly touch upon the structure.
