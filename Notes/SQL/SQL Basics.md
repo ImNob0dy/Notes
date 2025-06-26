@@ -1,4 +1,4 @@
-![Example Schema](![Image Description](../../Images/Pasted image 20250626141742.png))
+![Example Scheme](../../Images/Pasted%20image%2020250626141742.png)
 ## 1. Relational Database Concepts:
 
 Before SQL, let's briefly touch upon the structure.
