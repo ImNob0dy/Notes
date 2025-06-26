@@ -1,3 +1,7 @@
+
+![[Pasted image 20250626132544.png]] Example Scheme 
+
+
 ## 1. Relational Database Concepts:
 
 Before SQL, let's briefly touch upon the structure.
@@ -293,3 +297,4 @@ Used to add notes within SQL code, which are ignored by the database.
     
 - **Multi-line:** `/* This is a multi-line comment */`
     
+
