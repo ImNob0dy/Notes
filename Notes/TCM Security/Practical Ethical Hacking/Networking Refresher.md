@@ -48,7 +48,7 @@ TCP and UDP
 - Now, talking about the TCP is follows a 3 way handshake. Something like the following:
 		Syn > Syn Ack > Ack
 		#Note: It follows some flags like (Synchronization, Acknowledgement, Finish, Push, Reset, Urgent)......
-![[Pasted image 20250611173423.png]]
+![[Repo/Images/Pasted image 20250611173423.png]]
 
 		The above diagram represents the 3 way handshake.
 			This protocol guarantee that the packet reach the right destination at 
