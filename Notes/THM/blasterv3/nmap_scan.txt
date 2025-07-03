@@ -1,0 +1,11 @@
+# Nmap 7.94SVN scan initiated Wed Jul  2 12:31:36 2025 as: nmap -Pn -p- -T4 -vv -oN ./nmap_scan.txt 10.10.33.21
+Nmap scan report for 10.10.33.21
+Host is up, received user-set (0.16s latency).
+Scanned at 2025-07-02 12:31:37 IST for 166s
+Not shown: 65533 filtered tcp ports (no-response)
+PORT     STATE SERVICE       REASON
+80/tcp   open  http          syn-ack ttl 127
+3389/tcp open  ms-wbt-server syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Jul  2 12:34:23 2025 -- 1 IP address (1 host up) scanned in 166.71 seconds
