@@ -13,8 +13,7 @@
 - smb-security-mode : guest account enabled?
 - smb-os-discovery.nse : NetBIOS computer name and OS
 - smb-enum-sessions : enum logged in users
-- smb-enum-sessions --script-args smbusername=<user>,smbpassword=<pass>
-- smb-enum-users.nse : list all users that exist on samba version
+- U : list all users that exist on samba version
 
   ![smb-enum-users.nse output](./images/nmap-02-enumusers.png)
 
