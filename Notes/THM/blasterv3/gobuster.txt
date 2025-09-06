@@ -1,0 +1,22 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.33.21/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/retro                (Status: 301) [Size: 148] [--> http://10.10.33.21/retro/]
+[2K/Retro                (Status: 301) [Size: 148] [--> http://10.10.33.21/Retro/]
+
+[!] Keyboard interrupt detected, terminating.
+
+===============================================================
+Finished
+===============================================================
